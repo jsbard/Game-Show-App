@@ -1,2 +1,2 @@
-# Game-Show-App
- A Wheel-of-Fortune-style, browser-based game
+# Game Show Application
+## A Wheel-of-Fortune-style, browser-based game
