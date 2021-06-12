@@ -4,11 +4,11 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
-  --color-start: #5b85b7;
-  --color-neutral: #445069;
-  --color-neutral-light: #D2D2D2;
+  --color-win: #6C91C2;
+  --color-lose: #EEF36A;
+  --color-start: #020122;
+  --color-neutral: #6C91C2;
+  --color-neutral-light: #FAF2A1;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
   --font-size-large: 60px;
@@ -20,7 +20,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Verdana', sans-serif;
 }
 
 body {
@@ -111,7 +111,7 @@ button {
 
 .show {
   color: #fff;
-  background-color: #4ac0d5;
+  background-color: #3a3f58;
   font-size: 20px;
   height: 65px;
   width: 65px;
@@ -135,11 +135,15 @@ button {
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
+  -webkit-box-shadow: 1px 0px 27px -7px #3A3F58;
+  box-shadow: 1px 0px 27px -7px #3A3F58;
 }
 
 .wrong {
-  background: #f7a964;
+  background: #FBBFCA;
   color: #FFFFFF;
+  -webkit-box-shadow: 1px 0px 27px -7px #FBBFCA;
+  box-shadow: 1px 0px 27px -7px #FBBFCA;
 }
 
 .btn__reset {
@@ -180,7 +184,7 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #020122;
 }
 
 .start a {
