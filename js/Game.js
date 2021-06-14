@@ -57,23 +57,24 @@ class Game {
         if (event.type === "keyup"){
             const keyboardBtns = document.getElementsByClassName("key");
             for (let i=0; i<keyboardBtns.length; i++){
-                if (keyboardBtns[i].textContent === event.key){
+                // Check if the keyboard letter matches the pressed key and is not already selected
+                // (to avoid losing additional lives if a wrong key is pressed more than once)
+                if (keyboardBtns[i].textContent === event.key && !keyboardBtns[i].classList.contains("wrong")) {
                     // Disable the onscreen keyboard button
-                    if (!keyboardBtns[i].disabled) {
-                        keyboardBtns[i].disabled = true;
-                        // Add appropriate classes and reveal letter if the selected letter is in the random phrase
-                        if (this.activePhrase.checkLetter(event.key)) {
-                            keyboardBtns[i].classList.add("chosen");
-                            this.activePhrase.showMatchedLetter(event.key);
-                            // Check if player won
-                            if (this.checkForWin()) {
-                                this.gameOver(true);
-                            }
-                        } else {
-                            // Add appropriate classes and remove a life if player guessed wrong
-                            keyboardBtns[i].classList.add("wrong");
-                            this.removeLife();
+                    keyboardBtns[i].disabled = true;
+                    // Add appropriate classes and reveal letter if the selected letter is in the random phrase
+                    console.log(this.activePhrase);
+                    if (this.activePhrase.checkLetter(event.key)) {
+                        keyboardBtns[i].classList.add("chosen");
+                        this.activePhrase.showMatchedLetter(event.key);
+                        // Check if player won
+                        if (this.checkForWin()) {
+                            this.gameOver(true);
                         }
+                    } else {
+                        // Add appropriate classes and remove a life if player guessed wrong
+                        keyboardBtns[i].classList.add("wrong");
+                        this.removeLife();
                     }
                 }
             }

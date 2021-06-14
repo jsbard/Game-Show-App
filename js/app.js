@@ -14,16 +14,15 @@ startBtn.addEventListener("click", () => {
     keyboard.addEventListener("click", (e) => {
         if (e.target.tagName === "BUTTON"){
             game.handleInteraction(e)
-            console.log("Missed " + game.missed);
         }
     });
 
     // Listen for physical keyboard as well
     document.addEventListener("keyup", (e) => {
-        if (/[a-z]/.test(e.key)){
-            game.handleInteraction(e)
-            console.log("Missed " + game.missed);
-        }
+        // Prevent keyup event if onscreen button is disabled
+            if (/[a-z]/.test(e.key)) {
+                game.handleInteraction(e);
+            }
     });
 });
 
