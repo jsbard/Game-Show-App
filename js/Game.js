@@ -40,7 +40,6 @@ class Game {
             event.target.disabled = true;
             // Add appropriate classes and reveal letter if the selected letter is in the random phrase
             if (this.activePhrase.checkLetter(event.target.textContent)) {
-                console.log(this.activePhrase);
                 event.target.classList.add("chosen");
                 this.activePhrase.showMatchedLetter(event.target.textContent);
                 // Check if player won
