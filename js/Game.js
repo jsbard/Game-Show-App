@@ -6,7 +6,7 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = [
-            {phrase: "Don't cry over spilled milk"},
+            {phrase: "Mirror Mirror on the Wall"},
             {phrase: "Life is like a box of chocolates"},
             {phrase: "Singing in the rain"},
             {phrase: "The eye of the tiger"},
@@ -40,6 +40,7 @@ class Game {
             event.target.disabled = true;
             // Add appropriate classes and reveal letter if the selected letter is in the random phrase
             if (this.activePhrase.checkLetter(event.target.textContent)) {
+                console.log(this.activePhrase);
                 event.target.classList.add("chosen");
                 this.activePhrase.showMatchedLetter(event.target.textContent);
                 // Check if player won
@@ -63,7 +64,6 @@ class Game {
                     // Disable the onscreen keyboard button
                     keyboardBtns[i].disabled = true;
                     // Add appropriate classes and reveal letter if the selected letter is in the random phrase
-                    console.log(this.activePhrase);
                     if (this.activePhrase.checkLetter(event.key)) {
                         keyboardBtns[i].classList.add("chosen");
                         this.activePhrase.showMatchedLetter(event.key);
