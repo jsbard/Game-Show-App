@@ -6,3 +6,5 @@ Style changes made from original project guidelines:
 - Updated color scheme
 - Changed typeface to Verdana
 - Added box shadows to selected keyboard letters
+
+## View a demo at https://jsbard.github.io/Game-Show-App/
